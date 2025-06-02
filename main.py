@@ -2,10 +2,10 @@ import logging
 import requests
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+import os
 
-BOT_TOKEN = "7831503778:AAGllIL2ENH59cQW_O3K3EgliLpZoF_9rKE"
-
-IPINFO_TOKEN = "8f88466dc20815"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+IPINFO_TOKEN = os.getenv("IPINFO_TOKEN")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
